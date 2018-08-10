@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Numerics;
+using System.Diagnostics;
 
 namespace Shivam_Sood_Lab06_EX01
 {
@@ -51,7 +53,7 @@ namespace Shivam_Sood_Lab06_EX01
 
         }
 
-        private long Factorial (long num)
+        private BigInteger Factorial (BigInteger num)
         {
             if (num == 0)
                 return 1;
@@ -115,14 +117,8 @@ namespace Shivam_Sood_Lab06_EX01
                     throw new FormatException();
                 }
 
-                if(input>20)
-                {
-                    throw new InputValueTooLargeException("This program only calculates factorials up to 20.\n\nPlease enter an positive integer less than or equal to 20.");
-
-                }
-
-                long factorialResult = await Task.Run(() => Factorial(input));
-                MessageBox.Show($"The factorial of {this.getFactorialTB.Text} is {factorialResult:n0}", "Factorial was Successfully Calculated", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                BigInteger factorialResult = await Task.Run(() => Factorial(input));
+                MessageBox.Show($"The factorial of {getFactorialTB.Text} is {factorialResult:n0}", "Factorial was Successfully Calculated", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch(FormatException)
             {
