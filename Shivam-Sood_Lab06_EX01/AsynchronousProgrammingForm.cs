@@ -57,13 +57,13 @@ namespace Shivam_Sood_Lab06_EX01
         {
             if (num == 0)
                 return 1;
-<<<<<<< HEAD
+
 
             return num * Factorial(num - 1);
-=======
+
             
-            return num*Factorial(num -1) ;
->>>>>>> 07d987caf8588411e8fe31b93487871825a9138f
+           
+
         }
 
         private void AsynchronousProgrammingForm_Load(object sender,EventArgs e)
@@ -121,15 +121,11 @@ namespace Shivam_Sood_Lab06_EX01
                 {
                     throw new FormatException();
                 }
-<<<<<<< HEAD
+
                 lblCalculating.Text = "Calculating";
                 BigInteger factorialResult = await Task.Run(() => Factorial(input));
-                lblCalculating.Text = "";
-=======
-
-                BigInteger factorialResult = await Task.Run(() => Factorial(input));
                 await Task.Delay(5000);
->>>>>>> 07d987caf8588411e8fe31b93487871825a9138f
+                lblCalculating.Text = "";
                 MessageBox.Show($"The factorial of {getFactorialTB.Text} is {factorialResult:n0}", "Factorial was Successfully Calculated", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch(FormatException)
