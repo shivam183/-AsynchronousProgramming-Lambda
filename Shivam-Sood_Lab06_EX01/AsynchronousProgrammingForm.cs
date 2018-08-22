@@ -122,7 +122,7 @@ namespace Shivam_Sood_Lab06_EX01
                     throw new FormatException();
                 }
 
-                lblCalculating.Text = "Calculating";
+                lblCalculating.Text = "Calculating...";
                 BigInteger factorialResult = await Task.Run(() => Factorial(input));
                 await Task.Delay(5000);
                 lblCalculating.Text = "";
