@@ -57,12 +57,7 @@ namespace Shivam_Sood_Lab06_EX01
         {
             if (num == 0)
                 return 1;
-
-
             return num * Factorial(num - 1);
-
-            
-           
 
         }
 
