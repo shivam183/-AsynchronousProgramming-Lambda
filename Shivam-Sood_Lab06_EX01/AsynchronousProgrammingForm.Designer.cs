@@ -52,6 +52,7 @@
             this.inputNumberTB = new System.Windows.Forms.TextBox();
             this.checkForEvenOddBtn = new System.Windows.Forms.Button();
             this.inputNumberLbl = new System.Windows.Forms.Label();
+            this.lblCalculating = new System.Windows.Forms.Label();
             this.displayListAndSearchGroupBox.SuspendLayout();
             this.calculateAsynchGroupBox.SuspendLayout();
             this.checkForEvenOddGroupBox.SuspendLayout();
@@ -252,6 +253,7 @@
             // 
             // calculateAsynchGroupBox
             // 
+            this.calculateAsynchGroupBox.Controls.Add(this.lblCalculating);
             this.calculateAsynchGroupBox.Controls.Add(this.getFactorialTB);
             this.calculateAsynchGroupBox.Controls.Add(this.calculateBtn);
             this.calculateAsynchGroupBox.Controls.Add(this.getFactorialLbl);
@@ -342,6 +344,15 @@
             this.inputNumberLbl.TabIndex = 0;
             this.inputNumberLbl.Text = "Input Number:";
             // 
+            // lblCalculating
+            // 
+            this.lblCalculating.AutoSize = true;
+            this.lblCalculating.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCalculating.Location = new System.Drawing.Point(126, 83);
+            this.lblCalculating.Name = "lblCalculating";
+            this.lblCalculating.Size = new System.Drawing.Size(0, 17);
+            this.lblCalculating.TabIndex = 2;
+            // 
             // AsynchronousProgrammingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -389,6 +400,7 @@
         private System.Windows.Forms.TextBox inputNumberTB;
         private System.Windows.Forms.Button checkForEvenOddBtn;
         private System.Windows.Forms.Label inputNumberLbl;
+        private System.Windows.Forms.Label lblCalculating;
     }
 }
 

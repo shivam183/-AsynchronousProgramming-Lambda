@@ -53,7 +53,7 @@ namespace Shivam_Sood_Lab06_EX01
 
         }
 
-        private BigInteger Factorial (BigInteger num)
+        private BigInteger Factorial (long num)
         {
             if (num == 0)
                 return 1;
@@ -116,8 +116,9 @@ namespace Shivam_Sood_Lab06_EX01
                 {
                     throw new FormatException();
                 }
-
+                lblCalculating.Text = "Calculating";
                 BigInteger factorialResult = await Task.Run(() => Factorial(input));
+                lblCalculating.Text = "";
                 MessageBox.Show($"The factorial of {getFactorialTB.Text} is {factorialResult:n0}", "Factorial was Successfully Calculated", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch(FormatException)
